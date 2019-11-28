@@ -1,0 +1,26 @@
+import React, { Component } from 'react'
+
+class Staff extends Component {
+    state = {
+        currentUserName: '',
+        currentUserEmail: ''
+    }
+
+    componentDidMount() {
+        const idToken = JSON.parse(localStorage.getItem('okta-token-storage'));
+        this.setState({
+            currentUserEmail: idToken.idToken.claims.email,
+            currentUserName: idToken.idToken.claims.name
+        })
+    }
+
+    render() {
+        return (
+            <div>
+                
+            </div>
+        )
+    }
+}
+
+export default Staff
