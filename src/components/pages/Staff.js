@@ -15,12 +15,16 @@ class Staff extends Component {
     }
 
     render() {
+        const { currentUserEmail, currentUserName } = this.state;
+
         return (
             <div>
-                
+                <h1>Welcome { currentUserEmail }</h1>
+                <p>Email: { currentUserName }</p>
+                <p>You have reached the authorized staff area of the portal</p>
             </div>
         )
     }
 }
 
-export default Staff
+export default Staff;
